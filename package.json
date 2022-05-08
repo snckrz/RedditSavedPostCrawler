@@ -1,0 +1,29 @@
+{
+  "name": "reddittest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "dotenv": "^16.0.0",
+    "node-fetch": "^3.2.4",
+    "snoowrap": "^1.23.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/pr118/redditapifun.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/pr118/redditapifun/issues"
+  },
+  "homepage": "https://gitlab.com/pr118/redditapifun#readme",
+  "type": "module"
+}
