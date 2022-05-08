@@ -19,12 +19,13 @@ const r = new snoowrap({
   username: config.username,
   password: config.password,
 })
-
+const savedPostsTxtFile = 'urlsArray.txt';
 
 // delete file if it already exists
 try {
-  if (fs.existsSync('urlsArray.txt')) {
-    fs.unlinkSync('urlsArray.txt');
+  
+  if (fs.existsSync(savedPostsTxtFile)) {
+    fs.unlinkSync(savedPostsTxtFile);
   }
 } catch(err) {
   console.error(err)
@@ -41,8 +42,8 @@ function crawler(element: any, response: any, index: any) {
   console.log(element);
   
   // Create file and write URL to it
-  fs.writeFileSync('urlsArray.txt', element, { flag: 'a+' });
-  fs.writeFileSync('urlsArray.txt', '\n', { flag: 'a+' });
+  fs.writeFileSync(savedPostsTxtFile, element, { flag: 'a+' });
+  fs.writeFileSync(savedPostsTxtFile, '\n', { flag: 'a+' });
   
   // check if saved Post isnt deleted
   if(!element) {
